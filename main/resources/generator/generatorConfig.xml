@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- 数据库驱动:换成你本地的驱动包位置-->
+    <classPathEntry  location="D:\chajian\java需要的\lib\mysql-connector-java-5.1.25-bin.jar"/>
+    <context id="DB2Tables"  targetRuntime="MyBatis3">
+
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!--数据库链接URL，用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://119.23.237.192:3306/binglang_dev?useSSL=false" userId="root" password="root">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!-- 生成模型的包名和位置-->
+        <javaModelGenerator targetPackage="com.cloud.appcloud.betelnut.user.entity" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!-- 生成映射文件的包名和位置-->
+        <sqlMapGenerator targetPackage="com.cloud.appcloud.betelnut.user.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!-- 生成DAO的包名和位置-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.cloud.appcloud.betelnut.user.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
+
+        <!--<table tableName="Po_GoodsType" domainObjectName="GoodsType" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="Name" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="IdentityNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="GoodsCategoryName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="GoodsTypeImgUrl" jdbcType="VARCHAR"></columnOverride>-->
+
+        <!--</table>-->
+
+    <!--<table tableName="Po_Device" domainObjectName="Device" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--<property name="useActualColumnNames" value="true" />-->
+        <!--<columnOverride column="StoreName" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="Name" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="ChasisCode" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="DeviceAlias" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="SoleNumber" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="DeviceIMEI" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="JZYDeviceId" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="MacAddress" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="DeviceCategoryName" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="DeviceTypeName" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="ErrorCode" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="ErrorDes" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="ErrorChannel" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="EmployeeName" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="PhoneNumber" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="Province" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="City" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="CityCode" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="Area" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="AreaCode" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="Street" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="StreetCode" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="Village" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="VillageCode" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="Address" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="AdImgUrl" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="provinceCode" jdbcType="VARCHAR"></columnOverride>-->
+        <!--<columnOverride column="addressImgUrl" jdbcType="VARCHAR"></columnOverride>-->
+
+    <!--</table>-->
+        <!--<table tableName="Po_OrderBuy" domainObjectName="OrderBuy" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="StoreName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="Openid" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="NickName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="GoodsTypeName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="AppId" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="MchId" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceInfo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="NonceStr" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="Sign" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="SignType" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="Body" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="Detail" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="Attach" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OutTradeNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="FeeType" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="TotalFee" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="SpbillCreateIp" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="NotifyUrl" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="TradeType" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ProductId" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="PrepayResultCode" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="PrepayReturnMsg" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="PrepayId" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="TransactionId" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="BankType" jdbcType="VARCHAR"></columnOverride><columnOverride column="Body" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="IsSubscribe" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ResultCode" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ErrCode" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ErrCodeDes" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OrderErrCode" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OrderErrCodeDes" jdbcType="VARCHAR"></columnOverride>-->
+        <!--</table>-->
+
+
+
+        <!--<table tableName="Po_CouponUse" domainObjectName="CouponUse" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="StoreName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="Openid" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="NickName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="GoodsTypeName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="CouponName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="BuyOrderNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="UseOrderNo" jdbcType="VARCHAR"></columnOverride>-->
+        <!--</table>-->
+
+
+
+        <!--<table tableName="Po_CouponInfo" domainObjectName="CouponInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="CouponName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="GoodsTypeName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="NickName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="GoodsTypeName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="CouponName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="BuyOrderNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="UseOrderNo" jdbcType="VARCHAR"></columnOverride>-->
+
+        <!--</table>-->
+        <!--<table tableName="Po_DeviceGoodsChannelConfig" domainObjectName="DeviceGoodsChannel" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="GoodsTypeName" jdbcType="VARCHAR"></columnOverride>-->
+
+        <!--</table>-->
+        <!--<table tableName="Po_OrderCashRefund" domainObjectName="OderCashRefund" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="StoreName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="Openid" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="NickName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OutTradeNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="MchAppid" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="MchId" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceInfo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="NonceStr" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="Sign" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="PartnerTradeNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="CheckName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ReUserName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OrderDesc" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="SpbillCreateIp" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ResultCode" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ErrCode" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ErrCodeDes" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="PaymentNo" jdbcType="VARCHAR"></columnOverride>-->
+
+        <!--</table>-->
+
+        <!--<table tableName="Po_OrderCashBack" domainObjectName="OderCashBack" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="StoreName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="Openid" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="NickName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OutTradeNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="MchAppid" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="MchId" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceInfo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="NonceStr" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="Sign" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="PartnerTradeNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="CheckName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ReUserName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OrderDesc" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="SpbillCreateIp" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ResultCode" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ErrCode" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ErrCodeDes" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="PaymentNo" jdbcType="VARCHAR"></columnOverride>-->
+
+        <!--</table>-->
+        <!--<table tableName="Po_DeviceRegister" domainObjectName="DeviceRegister" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="RegisterNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ChasisCode" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceIMEI" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="EmployeeName" jdbcType="VARCHAR"></columnOverride>-->
+
+        <!--</table>-->
+
+        <!--<table tableName="Po_DeviceShipment" domainObjectName="DeviceShipment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="OutTradeNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ChasisCode" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceIMEI" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="EmployeeName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="EmployeeOpenid" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ErrorCode" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="ErrorDes" jdbcType="VARCHAR"></columnOverride>-->
+
+        <!--</table>-->
+
+        <!--<table tableName="Po_NormalCashPool" domainObjectName="NormalCashPool" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="name" jdbcType="VARCHAR"></columnOverride>-->
+        <!--</table>-->
+        <!--<table tableName="Po_SpecialCashPool" domainObjectName="SpecialCashPool" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="name" jdbcType="VARCHAR"></columnOverride>-->
+        <!--</table>-->
+        <!--<table tableName="Po_NormalCashPoolIncome" domainObjectName="NormalCashPoolIncome" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="StoreName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OutTradeNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="GoodsTypeName" jdbcType="VARCHAR"></columnOverride>-->
+        <!--</table>-->
+        <!--<table tableName="Po_SpecialCashPoolIncome" domainObjectName="SpecialCashPoolIncome" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="StoreName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OutTradeNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="GoodsTypeName" jdbcType="VARCHAR"></columnOverride>-->
+        <!--</table>-->
+        <!--<table tableName="Po_NormalCashPoolPay" domainObjectName="NormalCashPoolPay" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="StoreName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OutTradeNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="GoodsTypeName" jdbcType="VARCHAR"></columnOverride>-->
+        <!--</table>-->
+        <!--<table tableName="Po_SpecialCashPoolPay" domainObjectName="SpecialCashPoolPay" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="true" />-->
+            <!--<columnOverride column="StoreName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OutTradeNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="OnlyNo" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="DeviceName" jdbcType="VARCHAR"></columnOverride>-->
+            <!--<columnOverride column="GoodsTypeName" jdbcType="VARCHAR"></columnOverride>-->
+        <!--</table>-->
+
+        <table tableName="Po_DeviceSiteSelect" domainObjectName="DeviceSiteSelect" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="true" />
+            <columnOverride column="FarImgs" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="NearImgs" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="InstallImgs" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="DeviceTypeName" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="Province" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="City" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="Area" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="Street" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="Village" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="Address" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="Remarks" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="EmployeeName" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="AddressTypeName" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="ChannelName" jdbcType="VARCHAR"></columnOverride>
+
+        </table>
+
+
+        </context>
+    </generatorConfiguration>
